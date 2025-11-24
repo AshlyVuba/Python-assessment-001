@@ -41,7 +41,7 @@ If you see `FAILED` or `Error`:
 
 Python will tell you exactly which test failed.
 
-- Example: FAIL: test_01_cube_number
+- Example: FAIL: test_cube_number
 
 - Action: Go back to assessment.py, check your cube_number function, fix the logic, and run the test command again.
 
