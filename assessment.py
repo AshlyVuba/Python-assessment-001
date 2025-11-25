@@ -5,8 +5,7 @@ def cube_number(number):
     2. Return that number raised to the power of 3.
     """
     # TODO: Write your code here
-    pass
-
+    return pow(number, 3)
 def check_even_or_odd(number):
     """
     1. Receive a number.
@@ -14,7 +13,10 @@ def check_even_or_odd(number):
     3. If odd, return "Odd".
     """
     # TODO: Write your code here
-    pass
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
 
 def combine_names(first_name, last_name):
     """
@@ -23,7 +25,7 @@ def combine_names(first_name, last_name):
     Example: combine_names("James", "Bond") -> "Bond, James"
     """
     # TODO: Write your code here
-    pass
+    return f"{last_name}, {first_name}"
 
 def get_last_item(my_list):
     """
@@ -31,7 +33,7 @@ def get_last_item(my_list):
     2. Return the last item in that list (use negative indexing).
     """
     # TODO: Write your code here
-    pass
+    return my_list[-1]
 
 def sum_all_numbers(numbers):
     """
@@ -40,9 +42,9 @@ def sum_all_numbers(numbers):
     Hint: You can use a 'for' loop or the built-in sum() function.
     """
     # TODO: Write your code here
-    pass
+    return sum(numbers)
 
-def get_country_code(database, country):
+def get_country_code(database : dict, country):
     """
     1. Receive a dictionary (database) and a key (country).
     2. Return the value associated with that key.
@@ -50,4 +52,9 @@ def get_country_code(database, country):
     Example output: 'South Africa'
     """
     # TODO: Write your code here
-    pass
+    for key, value in database.items():
+        if key == country:
+            return value
+    return value
+data = {"ZA": "South Africa", "JP": "Japan", "BR": "Brazil"}
+print(get_country_code(data, "ZA"))
