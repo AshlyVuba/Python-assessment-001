@@ -52,9 +52,6 @@ def get_country_code(database : dict, country):
     Example output: 'South Africa'
     """
     # TODO: Write your code here
-    for key, value in database.items():
-        if key == country:
-            return value
-    return value
+    return database.get(country)
 data = {"ZA": "South Africa", "JP": "Japan", "BR": "Brazil"}
 print(get_country_code(data, "ZA"))
